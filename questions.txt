@@ -1,0 +1,24 @@
+0.  JPEG- 16 million PNG- 256 trillion GIF- 256  BMP- 16 million colours are supported by the respective file formats.
+1.  the GIF format supports animation.
+2.  lossy compression involves redcution in quality as is the case with JPEG files. lossless compression does not reduce the quality
+    of images as is the case with GIF files.                            
+3.  the JPEG format is lossy-compressed.
+4.  when a file is deleted on a FAT system, the meta data pointing to the file location is simply rewritten. the file is
+    renamed and the clusters indicating the file are moved to a list of free clusters, but the actual data is not deleted.
+5.  using programmes that rewrite zeroes, gutmann patterns and DoD specs on the disk can ensure (with high probability) that the 
+    disk data cannot be recovered.
+6.  stdint.h allows us to specify macros, new integer types and the number of bits used to store numerical values in them.
+7.  unitN_t allows us to designate unsigned integers with a width of N bits.
+8.  BYTE- 1 byte DWORD- 4 bytes LONG- 4 bytes WORD- 2 bytes
+9.  the first two bytes of a bmp file must represent ASCII BM to identify it as a BMP file, in hexa- decimal it is given by 0x42 0x4D
+10. bfSize stores the size in bits of the BITMAOFILEHEADER while the biSize stores teh size in bits of the BITMAPINFOHEADER.
+11. biHeight specifies the vertical length of a BMP image, so a negative biHeight is invalid and will probably not allow the
+    programme to function or the image to be generated.
+12. biBitCount specifies teh BMP's colour depth.
+13. fopen will return a NULL if outfile cannot be created. this can occur if the disk has no space to create the file.
+14. the third argument in fread specifies the number of elements of given file size to be read, since we are reading custom
+    defined structs where one struct contains all the information about one pixel we only read the the file one struct at a time.
+15. 1
+16. fseek finds the postion of the first padding in the line. 
+17. SEEK_CUR returns the current position of the cursor in a file that has been opened.
+18. 
