@@ -60,13 +60,7 @@ int main(int argc, char* argv[])
         return 4;
     }
     
-    bi_1.biHeight = bi.biHeight * factor;
-    bi_1.biWidth = bi.biWidth * factor;
-    int padding_1 =  (4 - (bi_1.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
-    int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
-    bi_1.biSizeImage = (abs(bi_1.biHeight) * bi_1.biWidth) * 3 + (padding_1 * abs(bi_1.biHeight));
-    bf_1.bfSize = 54 + bi_1.biSizeImage;
-    int line =  bi.biWidth * 3 + padding;
+    
 
     // write outfile's BITMAPFILEHEADER
     fwrite(&bf_1, sizeof(BITMAPFILEHEADER), 1, outptr);
